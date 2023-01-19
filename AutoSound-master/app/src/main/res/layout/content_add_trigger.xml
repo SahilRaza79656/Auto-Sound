@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center_horizontal"
+    tools:context="com.betadevels.autosound.activities.AddTriggerActivity"
+    tools:showIn="@layout/activity_add_trigger">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:id="@+id/add_trigger_root">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat_switch_str"
+                android:id="@+id/repeat_switch"/>
+
+        </LinearLayout>
+
+        <com.betadevels.autosound.layouts.AutoSpaceFlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/days_week_group"
+            android:paddingTop="1dp"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/sunday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/monday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/tuesday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/wednesday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/thursday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/friday_checkbox_str" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/days_checkbox_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:enabled="false"
+                android:textColor="@color/checkbox_color_selector"
+                android:text="@string/saturday_checkbox_str" />
+
+        </com.betadevels.autosound.layouts.AutoSpaceFlowLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/set_date_btn_str"
+                android:id="@+id/set_date_btn"
+                android:layout_weight="1"
+                android:textColor="@color/date_button_color_selector"
+                style="?android:buttonBarButtonStyle"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/set_time_btn_str"
+                android:id="@+id/set_time_btn"
+                android:layout_weight="1"
+                style="?android:buttonBarButtonStyle"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/ringer_mode_txt_str"
+                android:id="@+id/ringer_mode_txt"
+                android:layout_weight="1"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ringer_mode_spnr"
+                android:entries="@array/ringer_modes"
+                android:hint="@string/ringer_mode_spnr_hint"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/ringer_volume_txt_str"
+                android:id="@+id/ringer_volume_txt"
+                android:layout_weight="1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ringer_volume_skbar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/media_volume_txt_str"
+                android:id="@+id/media_volume_txt"
+                android:layout_weight="1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/media_volume_skbar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/alarm_volume_txt_str"
+                android:id="@+id/alarm_volume_txt"
+                android:layout_weight="1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_volume_skbar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_btn_str"
+                android:id="@+id/cancel_btn"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                style="?customButtonStyle"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_btn_str"
+                android:id="@+id/create_btn"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                style="?customButtonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

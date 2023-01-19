@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/main_activity_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/main_activity_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".AutoSoundTriggerReceiver" android:process=":remote"/>
+
+        <activity
+            android:name=".activities.AddTriggerActivity"
+            android:label="@string/add_trigger_activity_name"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value=".activities.MainActivity"/>
+        </activity>
+
+        <meta-data android:name="AA_MODELS"     android:value="com.betadevels.autosound.Trigger" />
+        <meta-data android:name="AA_DB_NAME"    android:value="AutoSound.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
+    </application>
+
+</manifest>

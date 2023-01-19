@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat" >
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat"/>
+
+    <style name="FloatingBtnStyle_dark">
+        <item name="backgroundTint">@color/mineShaft</item>
+        <item name="android:tint">@color/malibu</item>
+    </style>
+
+    <style name="ButtonStyle_dark" parent="@android:style/ButtonBar">
+        <item name="android:background">@color/mineShaft</item>
+        <item name="android:textColor">@color/malibu</item>
+        <item name="android:paddingBottom">@dimen/button_text_bottom_padding</item>
+    </style>
+</resources>
